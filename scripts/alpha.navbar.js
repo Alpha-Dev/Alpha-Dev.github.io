@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var oldtop = $("#Nav_Bar_Follows").position().top;
+  var oldtop = $("#Nav_Bar_Follows").offset().top;
   $(window).scroll(function(){
     var transitioning = 0;
     if($(window).scrollTop()>=oldtop){
@@ -16,4 +16,10 @@ $(document).ready(function(){
 
     }
   })
+  $('a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 500);
+      return false;
+  });
 })

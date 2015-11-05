@@ -43,7 +43,9 @@ a{
   justify-content: space-around;
   left:0;
   align-items: flex-end;
+  z-index: 2;
 }
+
 
 #people_container{
   display: flex;
@@ -66,6 +68,9 @@ a{
 #Page_2_Text_4,#center_container,#Page_2_Text_1{
   height:33%;
 }
+#Page_2_Text_4{
+  color:black;
+}
 /*CLASSES*/
 .Page_2_title{
   font-size:1.5em;
@@ -77,6 +82,12 @@ a{
   height:auto;
   width:25%;
   border-radius: 0.9em;
+  /*-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);*/
+}
+.tech_logo{
+  height:30%;
+  width:auto;
 }
 .person{
   display:flex;
@@ -111,6 +122,12 @@ a{
   background-color: black;
   width:25%;
   text-align: center;
+  opacity: 0.7;
+  transition: opacity 0.25s;
+  color:white;
+}
+.nav_bar_child:hover{
+  opacity: 0.9;
 }
 .take_parent_height_width{
   height:100%;
