@@ -72,6 +72,14 @@ a{
   color:black;
 }
 /*CLASSES*/
+.tech_box{
+  position:absolute;
+  font-size:1.5em;
+  color:white;
+  background-color:black;
+  padding: 15px;
+  border-radius:0.3em;
+}
 .Page_2_title{
   font-size:1.5em;
 }
@@ -82,8 +90,9 @@ a{
   height:auto;
   width:25%;
   border-radius: 0.9em;
-  /*-webkit-filter: grayscale(100%);
-  filter: grayscale(100%);*/
+}
+.person_image:hover{
+
 }
 .tech_logo{
   height:30%;
@@ -95,6 +104,14 @@ a{
   justify-content: center;
   flex-direction: column;
   width:50%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition:filter 0.25s;
+  transition:-webkit-filter 0.25s;
+}
+.person:hover{
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 .flexcontainer{
   display:flex;
