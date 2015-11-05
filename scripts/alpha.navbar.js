@@ -3,13 +3,43 @@ $(document).ready(function(){
   $(window).scroll(function(){
     var transitioning = 0;
     if($(window).scrollTop()>=oldtop){
-      $("#Nav_Bar_Follows").removeClass("static");
-      $("#Nav_Bar_Follows").addClass("follow")
+        $("#Nav_Bar_Follows").removeClass("static");
+        $("#Nav_Bar_Follows").addClass("follow")
       }
     else{
       console.log("readd")
       $("#Nav_Bar_Follows").removeClass("follow")
       $("#Nav_Bar_Follows").addClass("static")
+    }
+    var page_links_array = ["Page_2_link","Page_3_link","Page_4_link","Page_5_link"];
+    if($(window).scrollTop()<=$("#Page_2").offset().top){
+      for(var a = 0;a<page_links_array.length;a++){
+        $("#"+page_links_array[a]).css("padding-top","0px").css("padding-bottom","0px");
+      }
+    }
+    if($(window).scrollTop()>=$("#Page_2").offset().top && $(window).scrollTop()<$("#Page_3").offset().top){
+        for(var a = 0;a<page_links_array.length;a++){
+          $("#"+page_links_array[a]).css("padding-top","0px").css("padding-bottom","0px");
+        }
+        $("#Page_2_link").css("padding-top","10px");
+    }
+    if($(window).scrollTop()>=$("#Page_3").offset().top && $(window).scrollTop()<$("#Page_4").offset().top){
+      for(var a = 0;a<page_links_array.length;a++){
+        $("#"+page_links_array[a]).css("padding-top","0px").css("padding-bottom","0px");
+      }
+      $("#Page_3_link").css("padding-top","10px");
+    }
+    if($(window).scrollTop()>=$("#Page_4").offset().top && $(window).scrollTop()<$("#Page_5").offset().top){
+      for(var a = 0;a<page_links_array.length;a++){
+        $("#"+page_links_array[a]).css("padding-top","0px").css("padding-bottom","0px");
+      }
+      $("#Page_4_link").css("padding-top","10px");
+    }
+    if($(window).scrollTop()>=$("#Page_5").offset().top){
+      for(var a = 0;a<page_links_array.length;a++){
+        $("#"+page_links_array[a]).css("padding-top","0px").css("padding-bottom","0px");
+      }
+      $("#Page_5_link").css("padding-top","10px");
     }
   })
   $('a').click(function(){
@@ -20,7 +50,7 @@ $(document).ready(function(){
   });
 
   $(".tech_logo").hover(function(){
-    
+
     console.log($(this).attr("data"));
     var top = $(this).offset().top + $(this).height()+20;
     /*";left:"+$(this).offset().left+*/

@@ -42,7 +42,7 @@ a{
   display:flex;
   justify-content: space-around;
   left:0;
-  align-items: flex-end;
+
   z-index: 2;
 }
 
@@ -130,10 +130,12 @@ a{
 .follow{
   position: fixed;
   top:0;
+  align-items: flex-start;
 }
 .static{
   position:absolute;
   bottom:0;
+  align-items: flex-end;
 }
 .nav_bar_child{
   background-color: black;
