@@ -98,6 +98,8 @@ a{
 .active{
   padding-top:10px;
   opacity: 0.9;
+  border-bottom-left-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
 }
 .inactive{
   padding-top:0px;
