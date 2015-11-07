@@ -19,6 +19,10 @@ a{
   src:url("../font/telegrafico.ttf");
 }
 /*IDS*/
+#logo{
+  height:50%;
+  width:auto;
+}
 #Page_1_Desc{
   font-size:2em;
 }
