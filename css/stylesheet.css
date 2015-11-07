@@ -95,8 +95,16 @@ a{
   width:25%;
   border-radius: 0.9em;
 }
-.person_image:hover{
-
+.active{
+  padding-top:10px;
+  opacity: 0.9;
+}
+.inactive{
+  padding-top:0px;
+  opacity: 0.5;
+}
+.inactive:hover{
+  opacity: 0.8;
 }
 .tech_logo{
   height:30%;
@@ -145,12 +153,8 @@ a{
   background-color: black;
   width:25%;
   text-align: center;
-  opacity: 0.7;
   transition: opacity 0.25s;
   color:white;
-}
-.nav_bar_child:hover{
-  opacity: 0.9;
 }
 .take_parent_height_width{
   height:100%;

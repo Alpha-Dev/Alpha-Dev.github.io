@@ -14,32 +14,41 @@ $(document).ready(function(){
     var page_links_array = ["Page_2_link","Page_3_link","Page_4_link","Page_5_link"];
     if($(window).scrollTop()<=$("#Page_2").offset().top){
       for(var a = 0;a<page_links_array.length;a++){
-        $("#"+page_links_array[a]).css("padding-top","0px").css("padding-bottom","0px");
+        $("#"+page_links_array[a]).removeClass("active")
+        $("#"+page_links_array[a]).addClass("inactive");
       }
     }
     if($(window).scrollTop()>=$("#Page_2").offset().top && $(window).scrollTop()<$("#Page_3").offset().top){
         for(var a = 0;a<page_links_array.length;a++){
-          $("#"+page_links_array[a]).css("padding-top","0px").css("padding-bottom","0px");
-        }
-        $("#Page_2_link").css("padding-top","10px");
+        $("#"+page_links_array[a]).removeClass("active")
+        $("#"+page_links_array[a]).addClass("inactive");
+      }
+        $("#Page_2_link").removeClass("inactive");
+        $("#Page_2_link").addClass("active");
     }
     if($(window).scrollTop()>=$("#Page_3").offset().top && $(window).scrollTop()<$("#Page_4").offset().top){
       for(var a = 0;a<page_links_array.length;a++){
-        $("#"+page_links_array[a]).css("padding-top","0px").css("padding-bottom","0px");
-      }
-      $("#Page_3_link").css("padding-top","10px");
+      $("#"+page_links_array[a]).removeClass("active")
+      $("#"+page_links_array[a]).addClass("inactive");
+    }
+      $("#Page_3_link").removeClass("inactive");
+      $("#Page_3_link").addClass("active");
     }
     if($(window).scrollTop()>=$("#Page_4").offset().top && $(window).scrollTop()<$("#Page_5").offset().top){
       for(var a = 0;a<page_links_array.length;a++){
-        $("#"+page_links_array[a]).css("padding-top","0px").css("padding-bottom","0px");
-      }
-      $("#Page_4_link").css("padding-top","10px");
+      $("#"+page_links_array[a]).removeClass("active")
+      $("#"+page_links_array[a]).addClass("inactive");
+    }
+      $("#Page_4_link").removeClass("inactive");
+      $("#Page_4_link").addClass("active");
     }
     if($(window).scrollTop()>=$("#Page_5").offset().top){
       for(var a = 0;a<page_links_array.length;a++){
-        $("#"+page_links_array[a]).css("padding-top","0px").css("padding-bottom","0px");
-      }
-      $("#Page_5_link").css("padding-top","10px");
+      $("#"+page_links_array[a]).removeClass("active")
+      $("#"+page_links_array[a]).addClass("inactive");
+    }
+      $("#Page_5_link").removeClass("inactive");
+      $("#Page_5_link").addClass("active");
     }
   })
   $('a').click(function(){
