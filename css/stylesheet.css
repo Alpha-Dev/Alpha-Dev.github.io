@@ -20,11 +20,12 @@ a{
 }
 /*IDS*/
 #logo{
-  height:50%;
-  width:auto;
+  height:auto;
+  width:45%;
 }
 #Page_1_Desc{
   font-size:2em;
+  text-align: center;
 }
 #Page_1_Text_Container{
   display:flex;
@@ -131,6 +132,7 @@ a{
   display:flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .flexcontainer_column{
   padding-left: 10px;
@@ -172,4 +174,20 @@ a{
 .email:hover{
   opacity: 1;
   text-decoration: underline;
+}
+/*MEDIA  STUFF */
+@media screen and (max-width: 625px) {
+  #Nav_Bar_Follows{
+    font-size:1.5em;
+  }
+  .inactive{
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  .active{
+    padding-top:30px
+  }
+  .person{
+    width:100%;
+  }
 }
