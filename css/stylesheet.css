@@ -98,12 +98,14 @@ a{
   text-shadow: 2px 2px black;
 }
 .project_title{
+  padding-left:10px;
   top:0;
   left:0;
   font-size:5em;
   z-index: 2;
 }
 .project_desc{
+  padding-right:10px;
   bottom:0;
   right:0;
   font-size:2em;
