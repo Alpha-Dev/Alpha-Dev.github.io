@@ -111,7 +111,7 @@ a{
   font-size:2em;
   z-index: 2;
 }
-/*
+
 .triangle1{
   width: 0;
   height: 0;
@@ -129,7 +129,7 @@ a{
     bottom:-20%;
     transition: bottom 0.5s;
 }
-*/
+
 .project{
   background-color:red;
   width:50%;
