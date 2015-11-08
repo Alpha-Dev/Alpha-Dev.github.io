@@ -21,7 +21,7 @@ a{
 /*IDS*/
 #logo{
   height:auto;
-  width:45%;
+  width:25%;
 }
 #Page_1_Desc{
   font-size:2em;
@@ -77,6 +77,65 @@ a{
   color:black;
 }
 /*CLASSES*/
+.project_cover{
+  position:absolute;
+  cursor: pointer;
+  z-index: 5;
+}
+.project_background{
+  width:110%;
+  top:-50%;
+  position:absolute;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition:-webkit-filter 0.5s;
+  transition:filter 0.5;
+}
+.project_text{
+  position:absolute;
+  color:white;
+  transition:all 0.5s;
+}
+.project_title{
+  top:0;
+  left:0;
+  font-size:5em;
+  z-index: 2;
+}
+.project_desc{
+  bottom:0;
+  right:0;
+  font-size:2em;
+  z-index: 2;
+}
+
+.triangle1{
+  width: 0;
+  height: 0;
+  border-top: 280px solid black;
+  border-right: 951px solid transparent;
+  position:absolute;
+  top:-20%;
+  left:0;
+  transition: top 0.5s;
+}
+.triangle2{
+    width: 0;
+    height: 0;
+    position:absolute;
+    right:0;
+    bottom:-20%;
+    border-bottom: 280px solid black;
+    border-left: 951px solid transparent;
+    transition: bottom 0.5s;
+}
+.project{
+  background-color:red;
+  width:50%;
+  height:25%;
+  position:relative;
+  overflow:hidden;
+}
 .tech_box{
   position:absolute;
   font-size:1.5em;
