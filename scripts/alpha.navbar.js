@@ -74,7 +74,7 @@ $(document).ready(function(){
 
   var NUMBER_OF_PROJECTS = 1;
   for(var a = 0;a<NUMBER_OF_PROJECTS;a++){
-    $("#hover_styling").append('#cover_'+a+':hover #tri_'+a+'_1{top:-200%;}#cover_'+a+':hover #tri_'+a+'_2{bottom:-200%;}    #cover_'+a+':hover #project_title_'+a+'{top:-200%;}    #cover_'+a+':hover #project_desc_'+a+'{bottom:-200%;}    #cover_'+a+':hover #project_background_'+a+'{-webkit-filter: grayscale(0%);filter: grayscale(0%);}')
+    $("#hover_styling").append('<!--#cover_'+a+':hover #tri_'+a+'_1{top:-200%;}#cover_'+a+':hover #tri_'+a+'_2{bottom:-200%;}-->    #cover_'+a+':hover #project_title_'+a+'{top:-200%;}    #cover_'+a+':hover #project_desc_'+a+'{bottom:-200%;}    #cover_'+a+':hover #project_background_'+a+'{-webkit-filter: grayscale(0%);filter: grayscale(0%);}')
   }
   //SET PROJECT PANEL WIDTHS;
   set_project_triangles();
@@ -83,8 +83,10 @@ $(document).ready(function(){
     var height = $(".project").height()
     var width = $(".project").width();
     console.log(height + " " + width);
+    /*
     $(".triangle1").css("border-right",width+"px solid transparent").css("border-top",height+"px solid black")
     $(".triangle2").css("border-left",width+"px solid transparent").css("border-bottom",height+"px solid black")
+    */
     //190.2 = half my screen / font size = 951/5
     //475.5 = half my screen / font size = 951/2
     //SET PROJECT TITLE /
