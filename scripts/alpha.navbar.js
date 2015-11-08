@@ -74,7 +74,7 @@ $(document).ready(function(){
 
   var NUMBER_OF_PROJECTS = 1;
   for(var a = 0;a<NUMBER_OF_PROJECTS;a++){
-    $("#hover_styling").append('#cover_'+a+':hover #tri_'+a+'_1{top:-200%;}#cover_'+a+':hover #tri_'+a+'_2{bottom:-200%;}    #cover_'+a+':hover #project_title_'+a+'{top:-200%;}    #cover_'+a+':hover #project_desc_'+a+'{bottom:-200%;}    #cover_'+a+':hover #project_background_'+a+'{-webkit-filter: grayscale(0%);filter: grayscale(0%);}')
+    $("#hover_styling").append('<!--#cover_'+a+':hover #tri_'+a+'_1{top:-200%;}#cover_'+a+':hover #tri_'+a+'_2{bottom:-200%;}-->    #cover_'+a+':hover #project_title_'+a+'{top:-200%;}    #cover_'+a+':hover #project_desc_'+a+'{bottom:-200%;}    #cover_'+a+':hover #project_background_'+a+'{-webkit-filter: grayscale(0%);filter: grayscale(0%);}')
   }
   //SET PROJECT PANEL WIDTHS;
   set_project_triangles();
