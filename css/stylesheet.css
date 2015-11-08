@@ -112,8 +112,7 @@ a{
 .triangle1{
   width: 0;
   height: 0;
-  border-top: 280px solid black;
-  border-right: 951px solid transparent;
+
   position:absolute;
   top:-20%;
   left:0;
@@ -125,8 +124,6 @@ a{
     position:absolute;
     right:0;
     bottom:-20%;
-    border-bottom: 280px solid black;
-    border-left: 951px solid transparent;
     transition: bottom 0.5s;
 }
 .project{
