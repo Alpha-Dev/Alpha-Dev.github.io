@@ -48,7 +48,7 @@ a{
   justify-content: space-around;
   left:0;
 
-  z-index: 2;
+  z-index: 5;
 }
 
 
@@ -80,7 +80,7 @@ a{
 .project_cover{
   position:absolute;
   cursor: pointer;
-  z-index: 5;
+  z-index: 2;
 }
 .project_background{
   width:110%;
@@ -153,9 +153,10 @@ a{
   font-size:2em
 }
 .person_image{
-  height:auto;
-  width:25%;
+  height:80%;
+  width:auto;
   border-radius: 0.9em;
+  transition:height 0.25s;
 }
 .active{
   padding-top:10px;
@@ -180,14 +181,25 @@ a{
   justify-content: center;
   flex-direction: column;
   width:50%;
+
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition:filter 0.25s;
   transition:-webkit-filter 0.25s;
+
 }
 .person:hover{
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
+}
+.person_image_container{
+  height:20%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.person:hover .person_image{
+  height:85%;
 }
 .flexcontainer{
   display:flex;
@@ -216,7 +228,7 @@ a{
 }
 .nav_bar_child{
   background-color: black;
-  width:25%;
+  width:33.3333%;
   text-align: center;
   transition: opacity 0.25s;
   color:white;

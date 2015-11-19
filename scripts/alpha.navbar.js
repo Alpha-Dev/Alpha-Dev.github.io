@@ -11,7 +11,7 @@ $(document).ready(function(){
       $("#Nav_Bar_Follows").removeClass("follow")
       $("#Nav_Bar_Follows").addClass("static")
     }
-    var page_links_array = ["Page_2_link","Page_3_link","Page_4_link","Page_5_link"];
+    var page_links_array = ["Page_2_link","Page_3_link","Page_4_link"];
     //ACTIVE/INACTIVE NAV BARS
     if($(window).scrollTop()<=$("#Page_2").offset().top){
       for(var a = 0;a<page_links_array.length;a++){
@@ -35,7 +35,7 @@ $(document).ready(function(){
       $("#Page_3_link").removeClass("inactive");
       $("#Page_3_link").addClass("active");
     }
-    if($(window).scrollTop()>=$("#Page_4").offset().top && $(window).scrollTop()<$("#Page_5").offset().top){
+    if($(window).scrollTop()>=$("#Page_4").offset().top){
       for(var a = 0;a<page_links_array.length;a++){
       $("#"+page_links_array[a]).removeClass("active")
       $("#"+page_links_array[a]).addClass("inactive");
@@ -43,6 +43,7 @@ $(document).ready(function(){
       $("#Page_4_link").removeClass("inactive");
       $("#Page_4_link").addClass("active");
     }
+    /*
     if($(window).scrollTop()>=$("#Page_5").offset().top){
       for(var a = 0;a<page_links_array.length;a++){
       $("#"+page_links_array[a]).removeClass("active")
@@ -51,6 +52,7 @@ $(document).ready(function(){
       $("#Page_5_link").removeClass("inactive");
       $("#Page_5_link").addClass("active");
     }
+    */
   })
   //NAV BAR SCROLLING
   $('a').click(function(){
