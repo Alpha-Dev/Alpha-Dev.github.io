@@ -84,8 +84,12 @@ a{
 }
 .project_background{
   width:110%;
-  top:-50%;
-  position:absolute;
+  position: absolute;
+      top: -9999px;
+      bottom: -9999px;
+      left: -9999px;
+      right: -9999px;
+      margin: auto;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition:-webkit-filter 0.5s;
