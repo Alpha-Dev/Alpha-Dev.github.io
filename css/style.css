@@ -118,6 +118,7 @@ a {
     position: relative; }
 
 .section_header {
+  padding-top: 80px;
   font-size: 4em;
   text-align: center;
   color: white; }
@@ -211,13 +212,13 @@ a {
     padding: 10px;
     border-radius: 0.2em;
     overflow: hidden;
-    width: 500px; }
+    width: 300px; }
     .contacts_container .contacts_email_container:hover .contacts_email {
       text-decoration: underline; }
   .contacts_container .contacts_email {
     text-align: center;
     color: white;
-    font-size: 2em; }
+    font-size: 1.2em; }
 
 .page {
   height: 100%;
@@ -229,8 +230,15 @@ a {
 
 .large_text {
   font-family: telegrafico;
-  font-size: 14em;
   text-align: center;
   color: white; }
+
+/*MEDIA QUERIES */
+@media screen and (min-width: 550px) {
+  .contacts_container .contacts_email_container {
+    width: 500px; }
+
+  .contacts_container .contacts_email {
+    font-size: 2em; } }
 
 /*# sourceMappingURL=style.css.map */

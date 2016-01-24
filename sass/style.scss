@@ -7,6 +7,8 @@ $footer-background:#4B0082;
 $project_background_color:#4B0082;
 $header_background_color:#4B0082;
 
+
+
 //functions
 /* OVERIDES */
 footer{
@@ -160,6 +162,7 @@ a{
   }
 }
 .section_header{
+  padding-top:80px;
   font:{
     size:4em;
   }
@@ -273,7 +276,7 @@ a{
     padding:10px;
     border-radius:0.2em;
     overflow: hidden;
-    width:500px;
+    width:300px;
     &:hover{
       .contacts_email{
         text:{
@@ -286,7 +289,7 @@ a{
     text-align: center;
     color:white;
     font:{
-      size:2em;
+      size:1.2em;
     }
 
   }
@@ -302,10 +305,20 @@ a{
 .large_text{
   font:{
     family:$main-font;
-    size:14em;
   }
   text:{
     align:center;
   }
   color:$text-color;
+}
+
+
+/*MEDIA QUERIES */
+@media screen and (min-width: 550px) {
+  .contacts_container .contacts_email_container {
+    width: 500px;
+  }
+  .contacts_container .contacts_email{
+    font-size:2em;
+  }
 }

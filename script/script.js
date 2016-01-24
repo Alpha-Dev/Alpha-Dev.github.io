@@ -23,8 +23,12 @@ function generate_shadowd(length,b_dif,color){
   }
 	return strng;
 }
+window.onresize = function(){
+	$(".large_text").css("font-size",($("html").height()/85)/2 + ($("html").width()/135)/2+"em")
 
+}
 $(document).ready(function(){
+	$(".large_text").css("font-size",($("html").height()/85)/2 + ($("html").width()/135)/2+"em")
 	$('a').click(function(){
 			$('html, body').animate({
 					scrollTop: $( $.attr(this, 'href') ).offset().top
