@@ -37,8 +37,8 @@ $(document).ready(function(){
 	});
 	$(".alpha").css("text-shadow",generate_shadowd(1200,1,"#4B0082"))
 	$(".dev").css("text-shadow",generate_shadowd(1200,1,"	#3b0066"))
-	$(".project_name").css("text-shadow",generate_shadowd(200,1,"#3b0066"));
-	$(".person_text").css("text-shadow",generate_shadowd(200,1,"#0099cc"));
-	$(".text_shadow").css("text-shadow",generate_shadowd(200,1,"#0099cc"));
+	//$(".project_name").css("text-shadow",generate_shadowd(200,1,"#3b0066"));
+	//$(".person_text").css("text-shadow",generate_shadowd(200,1,"#0099cc"));
+	//$(".text_shadow").css("text-shadow",generate_shadowd(200,1,"#0099cc"));
 
 });
