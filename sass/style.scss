@@ -109,7 +109,7 @@ a{
     width:220px;
     height:auto;
     border:{
-      radius:0.5em;
+      radius:0.1em;
     }
     z-index:2;
   }
@@ -130,7 +130,7 @@ a{
   .person_surrounder{
     background-color:$button-background;
     border:{
-      radius:0.4em;
+      radius:0.1em;
     }
     margin-top:20px;
     padding:20px;
@@ -153,7 +153,7 @@ a{
     height:220px;
     width:220px;
     border:{
-      radius:2em;
+      radius:0.1em;
     }
     z-index:2;
   }
@@ -225,7 +225,7 @@ a{
     padding: 10px;
     background-color: $project_background_color;
     border:{
-      radius:0.5em;
+      radius:0.1em;
     }
     position: relative;
     overflow: hidden;
@@ -271,13 +271,16 @@ a{
   align-items: center;
   justify-content: center;
   .contacts_email_container{
+    opacity: 0.6;
     margin-top: 40px;
     background-color:$button-background;
     padding:10px;
-    border-radius:0.2em;
+    border-radius:0.1em;
     overflow: hidden;
     width:300px;
     &:hover{
+      transition:all 0.25s;
+      opacity: 1;
       .contacts_email{
         text:{
           decoration:underline;

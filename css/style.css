@@ -87,7 +87,7 @@ a {
   .person .person_web_image {
     width: 220px;
     height: auto;
-    border-radius: 0.5em;
+    border-radius: 0.1em;
     z-index: 2; }
   .person .person_web_holder {
     height: 220px;
@@ -96,7 +96,7 @@ a {
     justify-content: center; }
   .person .person_surrounder {
     background-color: skyblue;
-    border-radius: 0.4em;
+    border-radius: 0.1em;
     margin-top: 20px;
     padding: 20px; }
   .person .person_text {
@@ -112,7 +112,7 @@ a {
     opacity: 0.5;
     height: 220px;
     width: 220px;
-    border-radius: 2em;
+    border-radius: 0.1em;
     z-index: 2; }
   .person .person_box {
     position: relative; }
@@ -172,7 +172,7 @@ a {
     margin: 10px;
     padding: 10px;
     background-color: #4B0082;
-    border-radius: 0.5em;
+    border-radius: 0.1em;
     position: relative;
     overflow: hidden;
     height: 420px;
@@ -207,14 +207,18 @@ a {
   align-items: center;
   justify-content: center; }
   .contacts_container .contacts_email_container {
+    opacity: 0.6;
     margin-top: 40px;
     background-color: skyblue;
     padding: 10px;
-    border-radius: 0.2em;
+    border-radius: 0.1em;
     overflow: hidden;
     width: 300px; }
-    .contacts_container .contacts_email_container:hover .contacts_email {
-      text-decoration: underline; }
+    .contacts_container .contacts_email_container:hover {
+      transition: all 0.25s;
+      opacity: 1; }
+      .contacts_container .contacts_email_container:hover .contacts_email {
+        text-decoration: underline; }
   .contacts_container .contacts_email {
     text-align: center;
     color: white;
