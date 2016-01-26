@@ -1,44 +1,36 @@
+"use strict";
 
-function generate_shadowd(length,b_dif,color){
-	var strng = "";
-	var b = 1;
-  if(length > 0){
-  	for(var a = 1;a<=length;a+=2){
-  		strng +=a+"px "+b+"px 0 " + color;
-  		if(a+2 <length){
-  			strng+=","
-  		}
-  		b+=b_dif;
-  	}
-  }
-  else{
-    b = 5;
-    for(var a = 0;a>=length;a-=2){
-  		strng +=a+"px "+b+"px 0 " + color;
-  		if(a >length){
-  			strng+=","
-  		}
-  		b+=b_dif;
-  	}
-  }
-	return strng;
-}
-window.onresize = function(){
-	$(".large_text").css("font-size",($("html").height()/85)/2 + ($("html").width()/135)/2+"em")
-
-}
-$(document).ready(function(){
-	$(".large_text").css("font-size",($("html").height()/85)/2 + ($("html").width()/135)/2+"em")
-	$('a').click(function(){
-			$('html, body').animate({
-					scrollTop: $( $.attr(this, 'href') ).offset().top
-			}, 500);
-			return false;
+//Handle Resizes
+window.onresize = function () {
+	$(".large_text").css("font-size", $("html").height() / 85 / 2 + $("html").width() / 135 / 2 + "em");
+};
+//Smooth Scrolling Anchors
+$(document).ready(function () {
+	$(".large_text").css("font-size", $("html").height() / 85 / 2 + $("html").width() / 135 / 2 + "em");
+	$('a').click(function () {
+		$('html, body').animate({
+			scrollTop: $($.attr(this, 'href')).offset().top
+		}, 500);
+		return false;
 	});
-	$(".alpha").css("text-shadow",generate_shadowd(1200,1,"#4B0082"))
-	$(".dev").css("text-shadow",generate_shadowd(1200,1,"	#3b0066"))
-	//$(".project_name").css("text-shadow",generate_shadowd(200,1,"#3b0066"));
-	//$(".person_text").css("text-shadow",generate_shadowd(200,1,"#0099cc"));
-	//$(".text_shadow").css("text-shadow",generate_shadowd(200,1,"#0099cc"));
 
+	//Mobile Nav Bar
+	var NavigationBar = new NavBar(".button_container_mobile");
+	$(".button_mobile").click(function () {
+		if (NavigationBar.getNavBarState() == 1) {
+			NavigationBar.CloseNavBar();
+		}
+	});
+	$(".button_mobile_dropdown").click(function () {
+		if (NavigationBar.getNavBarState() == 0) {
+			NavigationBar.OpenNavBar();
+		} else if (NavigationBar.getNavBarState() == 1) {
+			NavigationBar.CloseNavBar();
+		}
+	});
+
+	//Shadow Generation
+	var Shadow_Gen = new TextShadowGenerator();
+	$(".alpha").css("text-shadow", Shadow_Gen.generate_shadowd(1200, 1, "#4B0082"));
+	$(".dev").css("text-shadow", Shadow_Gen.generate_shadowd(1200, 1, "	#3b0066"));
 });
