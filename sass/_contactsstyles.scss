@@ -1,0 +1,32 @@
+.contacts_container{
+  text-align: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  .contacts_email_container{
+    opacity: 0.6;
+    margin-top: 40px;
+    background-color:$button-background;
+    padding:10px;
+    border-radius:0.1em;
+    overflow: hidden;
+    width:300px;
+    &:hover{
+      transition:all 0.25s;
+      opacity: 1;
+      .contacts_email{
+        text:{
+          decoration:underline;
+        }
+      }
+    }
+  }
+  .contacts_email{
+    text-align: center;
+    color:white;
+    font:{
+      size:1.2em;
+    }
+
+  }
+}

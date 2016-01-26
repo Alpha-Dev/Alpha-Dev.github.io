@@ -1,0 +1,51 @@
+.project_row{
+
+  margin-top:20px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  .project{
+    margin:10px;
+    padding: 10px;
+    background-color: $project_background_color;
+    border:{
+      radius:0.1em;
+    }
+    position: relative;
+    overflow: hidden;
+    height:420px;
+    width:300px;
+    &:hover{
+      .project_image{
+        width:740px;
+        opacity: 1;
+      }
+    }
+  }
+  .project_name{
+    z-index: 10;
+    font:{
+      size:2em;
+    }
+    color:white;
+
+  }
+  .project_image_surrounder{
+    position: relative;
+    height:400px;
+    width:300px;
+    overflow: hidden;
+  }
+  .project_image{
+    opacity: 0.6;
+    transition: all 0.25s;
+    width:800px;
+    height:auto;
+    position: absolute;
+        top: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+        right: -9999px;
+        margin: auto;
+  }
+}

@@ -6,8 +6,14 @@ $button-background:skyblue;
 $footer-background:#4B0082;
 $project_background_color:#4B0082;
 $header_background_color:#4B0082;
+/*PERSON STYLES */
+@import "personstyles";
+@import "flipstyles";
+@import "projectstyles";
+@import "contactsstyles";
+@import "buttons";
 
-//functions
+
 /* OVERIDES */
 footer{
   height:10%;
@@ -39,48 +45,7 @@ a{
   src:url("../font/telegrafico.ttf");
 }
 
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
 
-.flip-container, .front, .back {
-	width: 220px;
-	height: 220px;
-}
-
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-}
 
 /*CLASSES*/
 .normal_text{
@@ -88,78 +53,9 @@ a{
   font-size:2em;
   color:white;
 }
-.person_row{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 100px;
-}
-.person{
 
-  transition: all 0.25s;
-  &:hover{
-    .person_image{
-      opacity: 1;
-    }
-  }
-  .person_web_image{
-    width:220px;
-    height:auto;
-    border:{
-      radius:0.5em;
-    }
-    z-index:2;
-  }
-  text-align: center;
-  margin:10px;
-  display:flex;
-  flex:{
-    direction: column;
-  }
-  align-items:center;
-  justify-content:center;
-  .person_web_holder{
-    height:220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .person_surrounder{
-    background-color:$button-background;
-    border:{
-      radius:0.4em;
-    }
-    margin-top:20px;
-    padding:20px;
-  }
-  .person_text{
-
-    position:relative;
-    transition: all 0.25s;
-    font-size:2em;
-    color:white;
-    overflow: hidden;
-
-  }
-  .person_name{
-    margin-top:80px;
-  }
-  .person_image{
-    transition: all 0.25s;
-    opacity: 0.5;
-    height:220px;
-    width:220px;
-    border:{
-      radius:2em;
-    }
-    z-index:2;
-  }
-  .person_box{
-    position: relative;
-  }
-}
 .section_header{
+  padding-top:80px;
   font:{
     size:4em;
   }
@@ -168,35 +64,7 @@ a{
   }
   color:white;
 }
-.button_holder{
- display:flex;
- flex-wrap: wrap;
- position:fixed;
- z-index: 10;
- background-color: $header_background_color;
- width: 100%;
- padding: 10px;
-}
-.button{
-  font-size:2em;
-  color:white;
-  overflow: hidden;
-  padding: 10px;
-  background-color: skyblue;
-  margin-right:5px;
-  margin-bottom: 5px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex:{
-    direction: row;
-  }
-  opacity:1;
-  transition:all 0.2s;
-  &:hover{
-    opacity: 1;
-  }
-}
+
 .left_top{
   top:0px;
   left:0px;
@@ -211,86 +79,8 @@ a{
   overflow-x: hidden;
   overflow-y: visible;
 }
-.project_row{
 
-  margin-top:20px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  .project{
-    margin:10px;
-    padding: 10px;
-    background-color: $project_background_color;
-    border:{
-      radius:0.5em;
-    }
-    position: relative;
-    overflow: hidden;
-    height:420px;
-    width:300px;
-    &:hover{
-      .project_image{
-        width:740px;
-        opacity: 1;
-      }
-    }
-  }
-  .project_name{
-    z-index: 10;
-    font:{
-      size:2em;
-    }
-    color:white;
 
-  }
-  .project_image_surrounder{
-    position: relative;
-    height:400px;
-    width:300px;
-    overflow: hidden;
-  }
-  .project_image{
-    opacity: 0.6;
-    transition: all 0.25s;
-    width:800px;
-    height:auto;
-    position: absolute;
-        top: -9999px;
-        bottom: -9999px;
-        left: -9999px;
-        right: -9999px;
-        margin: auto;
-  }
-}
-.contacts_container{
-  text-align: center;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  .contacts_email_container{
-    margin-top: 40px;
-    background-color:$button-background;
-    padding:10px;
-    border-radius:0.2em;
-    overflow: hidden;
-    width:500px;
-    &:hover{
-      .contacts_email{
-        text:{
-          decoration:underline;
-        }
-      }
-    }
-  }
-  .contacts_email{
-    text-align: center;
-    color:white;
-    font:{
-      size:2em;
-    }
-
-  }
-}
 .page{
   height:100%;
   width:100%;
@@ -302,10 +92,26 @@ a{
 .large_text{
   font:{
     family:$main-font;
-    size:14em;
   }
   text:{
     align:center;
   }
   color:$text-color;
+}
+
+
+/*MEDIA QUERIES */
+@media screen and (min-width: 550px) {
+  .contacts_container .contacts_email_container {
+    width: 500px;
+  }
+  .contacts_container .contacts_email{
+    font-size:2em;
+  }
+  .button_holder{
+    display:flex;
+  }
+  .button_holder_mobile{
+    display:none;
+  }
 }

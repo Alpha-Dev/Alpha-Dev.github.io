@@ -1,0 +1,71 @@
+.person_row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.person{
+
+  transition: all 0.25s;
+  &:hover{
+    .person_image{
+      opacity: 1;
+    }
+  }
+  .person_web_image{
+    width:220px;
+    height:auto;
+    border:{
+      radius:0.1em;
+    }
+    z-index:2;
+  }
+  text-align: center;
+  margin:10px;
+  display:flex;
+  flex:{
+    direction: column;
+  }
+  align-items:center;
+  justify-content:center;
+  .person_web_holder{
+    height:220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .person_surrounder{
+    background-color:$button-background;
+    border:{
+      radius:0.1em;
+    }
+    margin-top:20px;
+    padding:20px;
+  }
+  .person_text{
+
+    position:relative;
+    transition: all 0.25s;
+    font-size:2em;
+    color:white;
+    overflow: hidden;
+
+  }
+  .person_name{
+    margin-top:80px;
+  }
+  .person_image{
+    transition: all 0.25s;
+    opacity: 0.5;
+    height:220px;
+    width:220px;
+    border:{
+      radius:0.1em;
+    }
+    z-index:2;
+  }
+  .person_box{
+    position: relative;
+  }
+}

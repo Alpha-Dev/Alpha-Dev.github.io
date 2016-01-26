@@ -5,20 +5,31 @@
     <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Alpha Dev</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <script src="script/TextGenerator.js"></script>
+    <script src="script/NavBar.js"></script>
     <script src="script/script.js"></script>
     <style id="shadow_stylesheet"></style>
   </head>
   <body>
     <div id="page_1" class="page">
       <div class="left_top button_holder">
-        <a class="button text_shadow" href="#people">People</a>
-        <a class="button text_shadow" href="#works">Projects</a>
-        <a class="button text_shadow" href="#contacts">Contacts</a>
+        <a class="button" href="#people">People</a>
+        <a class="button" href="#works">Projects</a>
+        <a class="button" href="#contacts">Contacts</a>
+      </div>
+      <div class="left_top button_holder_mobile">
+        <i class="icon-menu button_mobile_dropdown"></i>
+        <div class="button_container_mobile">
+          <a class="button button_mobile" href="#people">People</a>
+          <a class="button button_mobile" href="#works">Projects</a>
+          <a class="button button_mobile" href="#contacts">Contacts</a>
+        </div>
       </div>
         <p class="large_text alpha">ALPHA</p>
         <p class="large_text dev">DEV</p>
     </div>
-    <p class="section_header" id="people">People</p>
+    <p class="section_header" id="people" style="">People</p>
     <div class="person_row">
       <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
         <a class="person_holder" href="http://reedkrawiec.github.io" >
@@ -97,7 +108,7 @@
         </a>
       </div>
     </div>
-    <p class="section_header" id="works">Projects</p>
+    <p class="section_header" id="works" style="">Projects</p>
       <div class="project_row">
         <a href="http://45.79.147.243:3000/"class="project">
           <div class="project_image_surrounder">
@@ -107,15 +118,15 @@
         </a>
       </div>
 
-      <p class="section_header" id="contacts" style="margin-top:80px;">Contacts</p>
+      <p class="section_header" id="contacts" style="">Contacts</p>
       <div class="contacts_container">
         <a class="contacts_email_container" href="mailto:reedkrawiec@gmail.com">
-          <p class="contacts_email text_shadow">Email Reed Krawiec (reedkrawiec@gmail.com)</p>
+          <p class="contacts_email">Email Reed Krawiec (reedkrawiec@gmail.com)</p>
         </a>
       </div>
       <div class="contacts_container">
-        <a class="contacts_email_container" href="mailto:andros.c.yang@gmail.com">
-          <p class="contacts_email text_shadow">Email Andros Yang (andros.c.yang@gmail.com)</p>
+        <a class="contacts_email_container" href="mailto:andros.cyang@gmail.com">
+          <p class="contacts_email">Email Andros Yang (andros.c.yang@gmail.com)</p>
         </a>
       </div>
     <footer></footer>
