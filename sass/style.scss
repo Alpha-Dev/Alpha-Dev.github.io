@@ -24,6 +24,7 @@ html{
   background-color: $background-color-default;
   height:100%;width:100%;
   font-family: $main-font;
+  overflow-x: hidden;
 }
 html,body,p{
   border:0;
