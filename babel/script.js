@@ -1,10 +1,13 @@
+/*jshint esnext: true */
+import {NavBar} from "./NavBar.js";
+import {TextShadowGenerator} from "./TextGenerator.js";
 //Handle Resizes
 window.onresize = function () {
-	$(".large_text").css("font-size", $("html").height() / 85 / 2 + $("html").width() / 135 / 2 + "em");
+	$(".large-text").css("font-size", $("html").height() / 85 / 2 + $("html").width() / 135 / 2 + "em");
 };
 //Smooth Scroll	ing Anchors
 $(document).ready(function () {
-	$(".large_text").css("font-size", $("html").height() / 85 / 2 + $("html").width() / 135 / 2 + "em");
+	$(".large-text").css("font-size", $("html").height() / 85 / 2 + $("html").width() / 135 / 2 + "em");
 	$('a').click(function () {
 		$('html, body').animate({
 			scrollTop: $($.attr(this, 'href')).offset().top
@@ -13,23 +16,23 @@ $(document).ready(function () {
 	});
 
 //Mobile Nav Bar
-let NavigationBar = new NavBar(".button_container_mobile")
-$(".button_mobile").click(function(){
-  if(NavigationBar.getNavBarState() == 1){
+let NavigationBar = new NavBar(".button-container-mobile");
+$(".button-mobile").click(function(){
+  if(NavigationBar.getNavBarState() === 1){
     NavigationBar.CloseNavBar();
   }
-})
-$(".button_mobile_dropdown").click(function(){
-  if(NavigationBar.getNavBarState() == 0){
+});
+$(".button-mobile-dropdown").click(function(){
+  if(NavigationBar.getNavBarState() === 0){
     NavigationBar.OpenNavBar();
   }
-  else if(NavigationBar.getNavBarState() == 1){
+  else if(NavigationBar.getNavBarState() === 1){
     NavigationBar.CloseNavBar();
   }
-})
+});
 
 	//Shadow Generation
-	let Shadow_Gen = new TextShadowGenerator;
-	$(".alpha").css("text-shadow",Shadow_Gen.generate_shadowd(1200,1,"#4B0082"))
-	$(".dev").css("text-shadow",Shadow_Gen.generate_shadowd(1200,1,"	#3b0066"))
+	let Shadow_Gen = new TextShadowGenerator();
+	$(".alpha").css("text-shadow",Shadow_Gen.generate_shadowd(1200,1,"#4B0082"));
+	$(".dev").css("text-shadow",Shadow_Gen.generate_shadowd(1200,1,"	#3b0066"));
 });

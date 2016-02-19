@@ -1,118 +1,123 @@
 //Variables
-$background-color-default:#6699ff;
-$text-color:white;
-$main-font:telegrafico;
-$button-background:skyblue;
-$footer-background:#4B0082;
-$project_background_color:#4B0082;
-$header_background_color:#4B0082;
-/*PERSON STYLES */
-@import "personstyles";
-@import "flipstyles";
-@import "projectstyles";
-@import "contactsstyles";
-@import "buttons";
-
-
-/* OVERIDES */
-footer{
-  height:10%;
-  background-color:$footer-background;
+$background-color-default: #69f;
+$text-color: #fff;
+$main-font: telegrafico;
+$button-background: #87ceeb;
+$footer-background: #4b0082;
+$project-background-color: #4b0082;
+$header-background-color: #4b0082;
+//PERSON STYLES
+@import 'personstyles';
+@import 'flipstyles';
+@import 'projectstyles';
+@import 'contactsstyles';
+@import 'buttons';
+// OVERIDES
+footer {
+  background-color: $footer-background;
+  height: 10%;
   margin-top: 10%;
 }
-html{
+
+html {
   background-color: $background-color-default;
-  height:100%;width:100%;
   font-family: $main-font;
+  height: 100%;
   overflow-x: hidden;
+  width: 100%;
 }
-html,body,p{
-  border:0;
+
+html,
+body,
+p {
+  border: 0;
+  margin: 0;
   padding: 0;
-  margin:0;
 }
-body{
-  height:100%;
-  width:100%;
+
+body {
+  height: 100%;
+  width: 100%;
 }
-a{
-  text:{
-    decoration:none;
+
+a {
+  text: {
+    decoration: none;
   }
 }
-/* FONTS */
-@font-face{
+//FONTS
+@font-face {
   font-family: telegrafico;
-  src:url("../font/telegrafico.ttf");
+  src: url('../font/telegrafico.ttf');
 }
-
-
-
-/*CLASSES*/
-.normal_text{
+//CLASSES
+.normal-text {
   text-align: center;
-  font-size:2em;
-  color:white;
+  font-size: 2em;
+  color: white;
 }
 
-.section_header{
-  padding-top:80px;
-  font:{
-    size:4em;
+.section-header {
+  padding-top: 80px;
+  font: {
+    size: 4em;
   }
-  text:{
-    align:center;
+  text: {
+    align: center;
   }
-  color:white;
+  color: white;
 }
 
-.left_top{
-  top:0px;
-  left:0px;
+.left-top {
+  top: 0;
+  left: 0;
 }
-.right_top{
-  right:10px;
-  top:10px;
+
+.right-top {
+  right: 10px;
+  top: 10px;
 }
-.text_box{
-  height:50%;
-  width:100%;
+
+.text-box {
+  height: 50%;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: visible;
 }
 
-
-.page{
-  height:100%;
-  width:100%;
-  display:flex;
-  align-items:center;
+.page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
 }
-.large_text{
-  font:{
-    family:$main-font;
+
+.large-text {
+  font: {
+    family: $main-font;
   }
-  text:{
-    align:center;
+  text: {
+    align: center;
   }
-  color:$text-color;
+  color: $text-color;
 }
-
-
-/*MEDIA QUERIES */
+//MEDIA QUERIES
 @media screen and (min-width: 550px) {
-  .contacts_container .contacts_email_container {
+  .contacts-container .contacts-email-container {
     width: 500px;
   }
-  .contacts_container .contacts_email{
-    font-size:2em;
+
+  .contacts-container .contacts-email {
+    font-size: 2em;
   }
-  .button_holder{
-    display:flex;
+
+  .button-holder {
+    display: flex;
   }
-  .button_holder_mobile{
-    display:none;
+
+  .button-holder-mobile {
+    display: none;
   }
 }

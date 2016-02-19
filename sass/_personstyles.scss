@@ -1,4 +1,4 @@
-.person_row{
+.person-row{
   display:flex;
   flex-wrap:wrap;
   justify-content: center;
@@ -9,11 +9,11 @@
 
   transition: all 0.25s;
   &:hover{
-    .person_image{
+    .person-image{
       opacity: 1;
     }
   }
-  .person_web_image{
+  .person-web-image{
     width:220px;
     height:auto;
     border:{
@@ -29,13 +29,13 @@
   }
   align-items:center;
   justify-content:center;
-  .person_web_holder{
+  .person-web-holder{
     height:220px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .person_surrounder{
+  .person-surrounder{
     background-color:$button-background;
     border:{
       radius:0.1em;
@@ -43,7 +43,7 @@
     margin-top:20px;
     padding:20px;
   }
-  .person_text{
+  .person-text{
 
     position:relative;
     transition: all 0.25s;
@@ -52,10 +52,10 @@
     overflow: hidden;
 
   }
-  .person_name{
+  .person-name{
     margin-top:80px;
   }
-  .person_image{
+  .person-image{
     transition: all 0.25s;
     opacity: 0.5;
     height:220px;
@@ -65,7 +65,7 @@
     }
     z-index:2;
   }
-  .person_box{
+  .person-box{
     position: relative;
   }
 }

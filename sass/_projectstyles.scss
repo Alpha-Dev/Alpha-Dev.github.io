@@ -1,4 +1,4 @@
-.project_row{
+.project-row{
 
   margin-top:20px;
   display:flex;
@@ -7,7 +7,7 @@
   .project{
     margin:10px;
     padding: 10px;
-    background-color: $project_background_color;
+    background-color: $project-background-color;
     border:{
       radius:0.1em;
     }
@@ -16,13 +16,13 @@
     height:420px;
     width:300px;
     &:hover{
-      .project_image{
+      .project-image{
         width:740px;
         opacity: 1;
       }
     }
   }
-  .project_name{
+  .project-name{
     z-index: 10;
     font:{
       size:2em;
@@ -30,13 +30,13 @@
     color:white;
 
   }
-  .project_image_surrounder{
+  .project-image-surrounder{
     position: relative;
     height:400px;
     width:300px;
     overflow: hidden;
   }
-  .project_image{
+  .project-image{
     opacity: 0.6;
     transition: all 0.25s;
     width:800px;

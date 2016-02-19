@@ -1,9 +1,9 @@
-.contacts_container{
+.contacts-container{
   text-align: center;
   display:flex;
   align-items: center;
   justify-content: center;
-  .contacts_email_container{
+  .contacts-email-container{
     opacity: 0.6;
     margin-top: 40px;
     background-color:$button-background;
@@ -14,14 +14,14 @@
     &:hover{
       transition:all 0.25s;
       opacity: 1;
-      .contacts_email{
+      .contacts-email{
         text:{
           decoration:underline;
         }
       }
     }
   }
-  .contacts_email{
+  .contacts-email{
     text-align: center;
     color:white;
     font:{
