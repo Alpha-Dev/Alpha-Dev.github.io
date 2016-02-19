@@ -1,132 +1,136 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Alpha Dev</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/fontello.css">
-    <script src="script/bundled.js"></script>
-    <style id="shadow_stylesheet"></style>
-  </head>
-  <body>
-    <div id="page_1" class="page">
-      <div class="left_top button_holder">
-        <a class="button" href="#people">People</a>
-        <a class="button" href="#works">Projects</a>
-        <a class="button" href="#contacts">Contacts</a>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Alpha Dev</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="css/fontello.css">
+  <script src="script/bundled.min.js"></script>
+  <style id="shadow-stylesheet"></style>
+</head>
+
+<body>
+  <div id="page-1" class="page">
+    <div class="left-top button-holder">
+      <a class="button" href="#people">People</a>
+      <a class="button" href="#works">Projects</a>
+      <a class="button" href="#contacts">Contacts</a>
+    </div>
+    <div class="left-top button-holder-mobile">
+      <i class="icon-menu button-mobile-dropdown"></i>
+      <div class="button-container-mobile">
+        <a class="button button-mobile" href="#people">People</a>
+        <a class="button button-mobile" href="#works">Projects</a>
+        <a class="button button-mobile" href="#contacts">Contacts</a>
       </div>
-      <div class="left_top button_holder_mobile">
-        <i class="icon-menu button_mobile_dropdown"></i>
-        <div class="button_container_mobile">
-          <a class="button button_mobile" href="#people">People</a>
-          <a class="button button_mobile" href="#works">Projects</a>
-          <a class="button button_mobile" href="#contacts">Contacts</a>
+    </div>
+    <p class="large-text alpha">ALPHA</p>
+    <p class="large-text dev">DEV</p>
+  </div>
+  <p class="section-header" id="people" style="">People</p>
+  <div class="person-row">
+    <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
+      <a class="person-holder" href="http://reedkrawiec.github.io">
+
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front">
+              <img class="person-image person-surrounder" style="padding-left:15px;padding-right:15px;" src="https://avatars1.githubusercontent.com/u/12550372?v=3&s=460" />
+            </div>
+            <div class="back">
+              <div class="person-web-holder person-image person-surrounder" style="padding-left:15px;padding-right:15px;">
+                <img class="person-web-image" src="images/reedgithub.png" />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-        <p class="large_text alpha">ALPHA</p>
-        <p class="large_text dev">DEV</p>
+        <p class="person-text person-surrounder person-name">Reed Krawiec</p>
+        <p class="person-text person-surrounder person-job">Front-End</p>
+      </a>
     </div>
-    <p class="section_header" id="people" style="">People</p>
-    <div class="person_row">
-      <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
-        <a class="person_holder" href="http://reedkrawiec.github.io" >
+    <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
+      <a class="person-holder" href="https://mimerme.github.io">
 
-          <div class="flip-container" >
-        	<div class="flipper">
-        		<div class="front">
-        			<img class="person_image person_surrounder" style="padding-left:15px;padding-right:15px;" src="https://avatars1.githubusercontent.com/u/12550372?v=3&s=460"/>
-        		</div>
-        		<div class="back">
-              <div class="person_web_holder person_image person_surrounder" style="padding-left:15px;padding-right:15px;">
-          			<img class="person_web_image" src="images/reedgithub.png"/>
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front">
+              <img class="person-image person-surrounder" style="padding-left:15px;padding-right:15px;" src="https://avatars1.githubusercontent.com/u/6308253?v=3&s=400" />
+            </div>
+            <div class="back">
+              <div class="person-web-holder person-image person-surrounder" style="padding-left:15px;padding-right:15px;">
+                <img class="person-web-image" src="images/androsgithub.png" />
               </div>
-        		</div>
-        	</div>
+            </div>
           </div>
-          <p class="person_text person_surrounder person_name">Reed Krawiec</p>
-          <p class="person_text person_surrounder person_job">Front-End</p>
-        </a>
-      </div>
-      <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
-        <a class="person_holder" href="https://mimerme.github.io" >
-
-          <div class="flip-container" >
-        	<div class="flipper">
-        		<div class="front">
-        			<img class="person_image person_surrounder" style="padding-left:15px;padding-right:15px;" src="https://avatars1.githubusercontent.com/u/6308253?v=3&s=400"/>
-        		</div>
-        		<div class="back">
-              <div class="person_web_holder person_image person_surrounder" style="padding-left:15px;padding-right:15px;">
-          			<img class="person_web_image" src="images/androsgithub.png"/>
-              </div>
-        		</div>
-        	</div>
-          </div>
-          <p class="person_text person_surrounder person_name">Andros Yang</p>
-          <p class="person_text person_surrounder person_job">Back-End</p>
-        </a>
-      </div>
-      <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
-        <a class="person_holder" href="http://github.com/bylly2000" >
-
-          <div class="flip-container" >
-        	<div class="flipper">
-        		<div class="front">
-        			<img class="person_image person_surrounder" style="padding-left:15px;padding-right:15px;" src="https://avatars3.githubusercontent.com/u/15961188?v=3&s=460"/>
-        		</div>
-        		<div class="back">
-              <div class="person_web_holder person_image person_surrounder" style="padding-left:15px;padding-right:15px;">
-          			<img class="person_web_image" src="images/byllygithub.png"/>
-              </div>
-        		</div>
-        	</div>
-          </div>
-          <p class="person_text person_surrounder person_name" style="width:220px;">Brandon Lin</p>
-          <p class="person_text person_surrounder person_job">Front-End</p>
-        </a>
-      </div>
-      <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
-        <a class="person_holder" href="http://vidushk.github.io/" >
-
-          <div class="flip-container" >
-        	<div class="flipper">
-        		<div class="front">
-        			<img class="person_image person_surrounder" style="padding-left:15px;padding-right:15px;" src="https://avatars1.githubusercontent.com/u/15527150?v=3&s=460"/>
-        		</div>
-        		<div class="back">
-              <div class="person_web_holder person_image person_surrounder" style="padding-left:15px;padding-right:15px;">
-          			<img class="person_web_image" src="images/vidushgithub.png"/>
-              </div>
-        		</div>
-        	</div>
-          </div>
-          <p class="person_text person_surrounder person_name" style="padding:12px;font-size:1.8em;width:220px;">Vidush<br>Kannekanti </p>
-          <p class="person_text person_surrounder person_job">UX-Design</p>
-        </a>
-      </div>
+        </div>
+        <p class="person-text person-surrounder person-name">Andros Yang</p>
+        <p class="person-text person-surrounder person-job">Back-End</p>
+      </a>
     </div>
-    <p class="section_header" id="works" style="">Projects</p>
-      <div class="project_row">
-        <a href="http://45.79.147.243:3000/"class="project">
-          <div class="project_image_surrounder">
-            <img class="project_image" src="images/playlister.png"/>
-          </div>
-          <p class="project_name">Playlister</p>
-        </a>
-      </div>
+    <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
+      <a class="person-holder" href="http://github.com/bylly2000">
 
-      <p class="section_header" id="contacts" style="">Contacts</p>
-      <div class="contacts_container">
-        <a class="contacts_email_container" href="mailto:reedkrawiec@gmail.com">
-          <p class="contacts_email">Email Reed Krawiec (reedkrawiec@gmail.com)</p>
-        </a>
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front">
+              <img class="person-image person-surrounder" style="padding-left:15px;padding-right:15px;" src="https://avatars3.githubusercontent.com/u/15961188?v=3&s=460" />
+            </div>
+            <div class="back">
+              <div class="person-web-holder person-image person-surrounder" style="padding-left:15px;padding-right:15px;">
+                <img class="person-web-image" src="images/byllygithub.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="person-text person-surrounder person-name" style="width:220px;">Brandon Lin</p>
+        <p class="person-text person-surrounder person-job">Front-End</p>
+      </a>
+    </div>
+    <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
+      <a class="person-holder" href="http://vidushk.github.io/">
+
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front">
+              <img class="person-image person-surrounder" style="padding-left:15px;padding-right:15px;" src="https://avatars1.githubusercontent.com/u/15527150?v=3&s=460" />
+            </div>
+            <div class="back">
+              <div class="person-web-holder person-image person-surrounder" style="padding-left:15px;padding-right:15px;">
+                <img class="person-web-image" src="images/vidushgithub.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="person-text person-surrounder person-name" style="padding:12px;font-size:1.8em;width:220px;">Vidush
+          <br>Kannekanti </p>
+        <p class="person-text person-surrounder person-job">UX-Design</p>
+      </a>
+    </div>
+  </div>
+  <p class="section-header" id="works" style="">Projects</p>
+  <div class="project-row">
+    <a href="http://45.79.147.243:3000/" class="project">
+      <div class="project-image-surrounder">
+        <img class="project-image" src="images/playlister.png" />
       </div>
-      <div class="contacts_container">
-        <a class="contacts_email_container" href="mailto:andros.cyang@gmail.com">
-          <p class="contacts_email">Email Andros Yang (andros.c.yang@gmail.com)</p>
-        </a>
-      </div>
-    <footer></footer>
-  </body>
+      <p class="project-name">Playlister</p>
+    </a>
+  </div>
+
+  <p class="section-header" id="contacts" style="">Contacts</p>
+  <div class="contacts-container">
+    <a class="contacts-email-container" href="mailto:reedkrawiec@gmail.com">
+      <p class="contacts-email">Email Reed Krawiec (reedkrawiec@gmail.com)</p>
+    </a>
+  </div>
+  <div class="contacts-container">
+    <a class="contacts-email-container" href="mailto:andros.cyang@gmail.com">
+      <p class="contacts-email">Email Andros Yang (andros.cyang@gmail.com)</p>
+    </a>
+  </div>
+  <footer></footer>
+</body>
+
 </html>
