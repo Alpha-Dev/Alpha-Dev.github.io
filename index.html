@@ -7,29 +7,32 @@
   <title>Alpha Dev</title>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
   <link rel="stylesheet" type="text/css" href="css/fontello.css">
-  <script src="script/bundled.min.js"></script>
   <style id="shadow-stylesheet"></style>
 </head>
 
 <body>
-  <div id="page-1" class="page">
-    <div class="left-top button-holder">
-      <a class="button" href="#people">People</a>
-      <a class="button" href="#works">Projects</a>
-      <a class="button" href="#contacts">Contacts</a>
+  <div class="left-top button-holder">
+    <a class="button" href="#people">People</a>
+    <a class="button" href="#Services">Services</a>
+    <a class="button" href="#works">Projects</a>
+    <a class="button" href="#contacts">Contacts</a>
+  </div>
+  <div class="left-top button-holder-mobile">
+    <i class="icon-menu button-mobile-dropdown"></i>
+    <div class="button-container-mobile">
+      <a class="button button-mobile" href="#people">People</a>
+      <a class="button button-mobile" href="#Services">Services</a>
+      <a class="button button-mobile" href="#works">Projects</a>
+      <a class="button button-mobile" href="#contacts">Contacts</a>
     </div>
-    <div class="left-top button-holder-mobile">
-      <i class="icon-menu button-mobile-dropdown"></i>
-      <div class="button-container-mobile">
-        <a class="button button-mobile" href="#people">People</a>
-        <a class="button button-mobile" href="#works">Projects</a>
-        <a class="button button-mobile" href="#contacts">Contacts</a>
-      </div>
-    </div>
+  </div>
+  <div id="page-1" class="page" style="-webkit-transform: translateZ(0);">
     <p class="large-text alpha">ALPHA</p>
     <p class="large-text dev">DEV</p>
   </div>
-  <p class="section-header" id="people" style="">People</p>
+
+  <div class="people-container appear-on-scroll appear-on-scroll-transition" id="people">
+  <p class="section-header" style="">People</p>
   <div class="person-row">
     <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
       <a class="person-holder" href="http://reedkrawiec.github.io">
@@ -90,7 +93,6 @@
     </div>
     <div class="person" ontouchstart="document.getElementsByClassName('flip-container').classList.toggle('hover');">
       <a class="person-holder" href="http://vidushk.github.io/">
-
         <div class="flip-container">
           <div class="flipper">
             <div class="front">
@@ -109,7 +111,23 @@
       </a>
     </div>
   </div>
-  <p class="section-header" id="works" style="">Projects</p>
+</div>
+<div class="appear-on-scroll appear-on-scroll-transition ad-container" id="Services">
+<p class="section-header">Services</p>
+<div class="ad-typer-container">
+  <p class="ad-typer">Let US <span class="ad-typer-span TextTyper"></span>your website. </p>
+</div>
+<div class="ad-buttons-container">
+  <a class="ad-button button-design" href="/design">
+    <i class="icon-brush ad-icon"></i>
+  </a>
+  <a class="ad-button button-develop" href="/develop">
+    <i class="icon-code ad-icon"></i>
+  </a>
+</div>
+</div>
+<div class="appear-on-scroll appear-on-scroll-transition" id="works">
+  <p class="section-header" style="">Projects</p>
   <div class="project-row">
     <a href="http://45.79.147.243:3000/" class="project">
       <div class="project-image-surrounder">
@@ -118,8 +136,9 @@
       <p class="project-name">Playlister</p>
     </a>
   </div>
-
-  <p class="section-header" id="contacts" style="">Contacts</p>
+</div>
+<div class="appear-on-scroll appear-on-scroll-transition" id="contacts">
+  <p class="section-header"  style="">Contacts</p>
   <div class="contacts-container">
     <a class="contacts-email-container" href="mailto:reedkrawiec@gmail.com">
       <p class="contacts-email">Email Reed Krawiec (reedkrawiec@gmail.com)</p>
@@ -130,7 +149,9 @@
       <p class="contacts-email">Email Andros Yang (andros.cyang@gmail.com)</p>
     </a>
   </div>
+</div>
   <footer></footer>
+  <script src="script/bundled.min.js"></script>
 </body>
 
 </html>
