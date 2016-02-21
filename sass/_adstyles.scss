@@ -1,0 +1,68 @@
+.ad-container {
+  margin-top:12vh;
+  margin-bottom:12vh;
+  display: flex;
+  flex: {
+    direction: column;
+  }
+  align-items: center;
+  justify-content: center;
+  .ad-typer-container {
+    margin:10px;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    width:50%;
+    max-width: 500px;
+    .ad-typer {
+      margin:10px;
+      font-size: 2em;
+      text-align: center;
+      color: black;
+      .ad-typer-span {
+        &:after {
+          animation: blink-animation 1s steps(5, start) infinite;
+          -webkit-animation: blink-animation 1s steps(5, start) infinite;
+          content: "|";
+        }
+      }
+    }
+  }
+}
+.ad-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  .ad-icon {
+    color:white;
+    transition: all 1s;
+    font-size: 4em;
+  }
+  .ad-button {
+    border-radius: 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    background-color: $button-background;
+    &:hover {
+      .ad-icon {
+        font-size: 5em;
+      }
+    }
+  }
+}
+//Blink keyframe
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

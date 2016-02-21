@@ -12,6 +12,8 @@ $header-background-color: #4b0082;
 @import 'projectstyles';
 @import 'contactsstyles';
 @import 'buttons';
+@import 'appertransition';
+@import 'adstyles';
 // OVERIDES
 footer {
   background-color: $footer-background;
@@ -94,6 +96,17 @@ a {
   justify-content: center;
 }
 
+//ON SCROLL APPEAR
+.appear-on-scroll {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.appear-on-scroll-transition {
+  transition: all .5s;
+  position: relative;
+}
+
 .large-text {
   font: {
     family: $main-font;
@@ -104,7 +117,7 @@ a {
   color: $text-color;
 }
 //MEDIA QUERIES
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 685px) {
   .contacts-container .contacts-email-container {
     width: 500px;
   }

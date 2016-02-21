@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     cssnano = require('gulp-cssnano'),
     uglify = require('gulp-uglify'),
+    imageop = require('gulp-image-optimization');
     rename = require("gulp-rename");
 
 gulp.task('babel', function () {
@@ -16,8 +17,7 @@ gulp.task('babel', function () {
       }))
       .pipe(uglify())
       .pipe(rename("bundled.min.js"))
-      .pipe(gulp.dest('script'))
-        .pipe(connect.reload());
+      .pipe(gulp.dest('script'));
 });
 gulp.task('connect', function() {
     connect.server({

@@ -1,5 +1,8 @@
 /*jshint esnext: true */
 export class TextShadowGenerator {
+    constructor(element){
+
+    }
     generate_shadowd(length,b_dif,color){
     	let strng = "";
     	let b = 1;
