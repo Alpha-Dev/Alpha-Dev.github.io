@@ -1,4 +1,4 @@
-.ad-container {
+.service-container {
   margin-top:12vh;
   margin-bottom:12vh;
   display: flex;
@@ -7,19 +7,19 @@
   }
   align-items: center;
   justify-content: center;
-  .ad-typer-container {
+  .service-typer-container {
     margin:10px;
     background-color: white;
     display: flex;
     align-items: flex-start;
     width:50%;
     max-width: 500px;
-    .ad-typer {
+    .service-typer {
       margin:10px;
       font-size: 2em;
       text-align: center;
       color: black;
-      .ad-typer-span {
+      .service-typer-span {
         &:after {
           animation: blink-animation 1s steps(5, start) infinite;
           -webkit-animation: blink-animation 1s steps(5, start) infinite;
@@ -29,19 +29,19 @@
     }
   }
 }
-.ad-buttons-container {
+.service-buttons-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
-  .ad-icon {
+  .service-icon {
     color:white;
     transition: all 1s;
     width:80px;
     height:80px;
   }
-  .ad-button {
-    border-radius: 0.2em;
+  .service-button {
+    border-rserviceius: 0.2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,8 +51,8 @@
     background-color: $button-background;
     transition:background-color .5s;
     &:hover {
-      background-color:$header-background-color;
-      .ad-icon {
+      background-color:$heserviceer-background-color;
+      .service-icon {
         height:100px;
         width:100px;
       }
