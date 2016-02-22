@@ -37,7 +37,8 @@
   .ad-icon {
     color:white;
     transition: all 1s;
-    font-size: 4em;
+    width:80px;
+    height:80px;
   }
   .ad-button {
     border-radius: 0.2em;
@@ -48,9 +49,12 @@
     height: 150px;
     margin: 20px;
     background-color: $button-background;
+    transition:background-color .5s;
     &:hover {
+      background-color:$header-background-color;
       .ad-icon {
-        font-size: 5em;
+        height:100px;
+        width:100px;
       }
     }
   }

@@ -9,6 +9,9 @@
 
   transition: all 0.25s;
   &:hover{
+    .person-surrounder{
+      background-color: $header-background-color;
+    }
     .person-image{
       opacity: 1;
     }
