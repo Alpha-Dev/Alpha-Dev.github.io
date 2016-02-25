@@ -32,8 +32,12 @@ gulp.task('hello', function() {
 gulp.task('sass', function(){
   return gulp.src('sass/style.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
-    .pipe(cssnano())
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    //.pipe(cssnano())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest('css'));
 });
-gulp.task('default',['connect','babel','sass']);
+gulp.task('default',['babel','sass']);
