@@ -1,6 +1,6 @@
 .service-container {
-  margin-top:12vh;
-  margin-bottom:12vh;
+  margin-top: 12vh;
+  margin-bottom: 12vh;
   display: flex;
   flex: {
     direction: column;
@@ -8,14 +8,14 @@
   align-items: center;
   justify-content: center;
   .service-typer-container {
-    margin:10px;
+    margin: 10px;
     background-color: white;
     display: flex;
     align-items: flex-start;
-    width:50%;
+    width: 50%;
     max-width: 500px;
     .service-typer {
-      margin:10px;
+      margin: 10px;
       font-size: 2em;
       text-align: center;
       color: black;
@@ -35,13 +35,13 @@
   align-items: center;
   padding-top: 20px;
   .service-icon {
-    color:white;
+    color: white;
     transition: all 1s;
-    width:80px;
-    height:80px;
+    width: 80px;
+    height: 80px;
   }
   .service-button {
-    border-rserviceius: 0.2em;
+    border-radius: 0.2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,12 +49,12 @@
     height: 150px;
     margin: 20px;
     background-color: $button-background;
-    transition:background-color .5s;
+    transition: background-color 0.5s;
     &:hover {
-      background-color:$heserviceer-background-color;
+      background-color: $hddeader-background-color;
       .service-icon {
-        height:100px;
-        width:100px;
+        height: 100px;
+        width: 100px;
       }
     }
   }
