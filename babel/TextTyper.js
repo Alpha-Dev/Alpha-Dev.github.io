@@ -2,12 +2,19 @@ export class TextTyper{
   constructor(element){
     this.element = document.querySelector(element);
     this.transitioning = false;
+    this.stopper = false;
   }
   getTransition(){
     return this.transitioning;
   }
   setTransition(x){
     this.transitioning = x;
+  }
+  getstopper(){
+    return this.stopper;
+  }
+  setstopper(x){
+    this.stopper = x;
   }
   writeWord(word){
     let length = word.length;
@@ -20,7 +27,7 @@ export class TextTyper{
       thing.setTransition(true);
       setTimeout(()=>{
       element.innerHTML+=word.charAt(a);
-      if(a<=length)
+      if(a<=length && thing.getstopper() === false)
         Looper();
       else
         thing.setTransition(false);
@@ -33,6 +40,7 @@ export class TextTyper{
     let element = this.element;
     let a = length;
     let thing = this;
+    thing.setstopper(true);
     if(!thing.getTransition())
       Looper();
     function Looper(){
@@ -42,6 +50,7 @@ export class TextTyper{
       if(a>=0)
         Looper();
       else{
+        thing.setstopper(false);
         thing.setTransition(false);
         callback();
       }

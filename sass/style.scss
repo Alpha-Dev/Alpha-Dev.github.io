@@ -6,6 +6,7 @@ $button-background: #87ceeb;
 $footer-background: #4b0082;
 $project-background-color: #4b0082;
 $header-background-color: #4b0082;
+$button-ripple: #0066ff;
 //PERSON STYLES
 @import 'personstyles';
 @import 'flipstyles';
@@ -96,6 +97,14 @@ a {
   justify-content: center;
 }
 
+.site-nav-cover{
+  height:100%;
+  width:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index: 5;
+}
 //ON SCROLL APPEAR
 .appear-on-scroll {
   opacity: 0;
