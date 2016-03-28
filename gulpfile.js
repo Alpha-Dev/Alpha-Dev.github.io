@@ -7,8 +7,7 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
+    image = require('gulp-image'),
     rename = require("gulp-rename");
 
 gulp.task('babel', function () {
@@ -33,12 +32,8 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('css'));
 });
 gulp.task('image_optimization', () => {
-	return gulp.src('images_dev/*')
-		.pipe(imagemin({
-			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
-			use: [pngquant()]
-		}))
-		.pipe(gulp.dest('images'));
+	return gulp.src('images_dev/*.*')
+		.pipe(image())
+		.pipe(gulp.dest('images_prod'));
 });
 gulp.task('default',['babel','sass']);
