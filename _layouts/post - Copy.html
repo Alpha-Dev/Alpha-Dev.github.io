@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Alpha Dev</title>
+    <link rel="stylesheet" type="text/css" href=" /css/post.min.css">
+  </head>
+  <body>
+    {% include nav.html %}
+    <section class="post--container">
+      <div class="post">
+        <img class="image" src="{{page.image }}" />
+        <h1 class="title">{{ page.title }}</h1>
+        <p class="author">{{ page.author }}</p>
+        <p class="date">{{ page.date | date: '%B %-d, %Y' }}</p>
+        <div class="divider"></div>
+        <div class="post-body">
+          {{ content }}
+        </div>
+      </div>
+    </section>
+    <script src="/scripts/main.min.js"></script>
+  </body>
+</html>

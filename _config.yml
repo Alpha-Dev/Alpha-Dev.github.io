@@ -1,0 +1,24 @@
+# My variables
+google_verification: null
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# File management
+include: [".htaccess"]
+exclude: ["README.md", "LICENSE"]
+
+
+# Sass
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+
+gems: [jekyll-paginate]
