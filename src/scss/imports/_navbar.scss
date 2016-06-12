@@ -1,0 +1,163 @@
+.nav{
+  position: fixed;
+  top:0px;
+  left:0px;
+  height:100px;
+  width:100%;
+  background-color: white;
+  display:flex;
+  align-items: center;
+  justify-content:flex-end;
+  z-index: 5;
+  transition: all .25s;
+  font-family:bold;
+  a{
+    text-decoration: none;
+  }
+  .desktop{
+    display:inherit;
+  }
+  .mobile{
+    @include CenterFlex;
+    position: absolute;
+    left:0px;
+    top:100px;
+    height:0;
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+    transition: all .25s;
+    .item{
+      width: 90%;
+      height: 20%;
+    }
+  }
+  .mobile-open{
+    height: calc(100vh - 100px  );
+  }
+  .taptarget{
+    margin-right: 20px;
+    position: relative;
+    height:60px;
+    width: 65px;
+    cursor: pointer;
+    transition: all .25s;
+    display: none;
+    .taptarget--div{
+      border-radius: 3px;
+      background-color: indigo;
+      height:13px;
+      width:100%;
+      left:0px;
+      transition: all .25s;
+      position: absolute;
+      &:nth-of-type(1){
+        top:0px;
+      }
+      &:nth-of-type(2){
+        top:50%;
+        transform:translateY(-50%);
+      }
+      &:nth-of-type(3){
+        top:60px-13px;
+      }
+    }
+  }
+  .taptarget-open{
+    .taptarget--div{
+      position:absolute;
+      left:0;
+      &:nth-of-type(1){
+        transform: rotate(45deg);
+        top:50%;
+      }
+      &:nth-of-type(2){
+        transform: rotate(-45deg);
+        top:50%;
+      }
+      &:nth-of-type(3){
+        transform: rotate(45deg);
+        top:50%;
+      }
+    }
+  }
+  .item{
+    @include CenterFlex;
+    padding: 5px;
+    transition: all .25s;
+    background-color: indigo;
+    margin-right: 5px;
+    padding: 10px;
+    position: relative;
+    .text{
+      color:white;
+      font-size:2.5em;
+    }
+    .fillbar{
+      height: 5px;
+      width:0px;
+      position: absolute;
+      bottom:0;
+      left:0;
+      background-color: lighten(indigo,30%);
+      transition: all .25s;
+    }
+    .fillbarvertical{
+      height: 0px;
+      width:5px;
+      position: absolute;
+      bottom:0;
+      left:0;
+      background-color: lighten(indigo,30%);
+      transition: all .25s;
+    }
+    .topright{
+      top:0;
+      right: 0;
+      left:auto;
+      bottom:auto;
+    }
+    &:hover{
+      .fillbar{
+        width:100%;
+      }
+      .fillbarvertical{
+        height: 100%;
+      }
+    }
+  }
+  @include Media(1050px){
+    .taptarget{
+      display:block;
+    }
+    .mobile{
+      display: flex;
+    }
+    .desktop{
+      display: none;
+    }
+  }
+  .left{
+    margin-left: 10px;
+    margin-right: auto;
+    .text{
+      font-size:3em;
+    }
+    @include Media(768px){
+      .text{
+        display: none;
+      }
+    }
+    .logo{
+      margin-right: 2px;
+      height:37px;
+      width: auto;
+    }
+  }
+}
+.nav-up{
+  transform: translateY(-100%);
+}

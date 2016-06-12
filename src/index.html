@@ -1,0 +1,19 @@
+---
+layout: home
+---
+
+{% for post in site.posts limit:2 %}
+  <div class="col-6-12">
+    <div class="infobox--container">
+      <a href="{{post.url}}" class="infobox">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <p class="title">{{ post.title }}
+          <br>
+          <span class="undertext">{{ post.author }}</span>
+        </p>
+        <img class="background" src="{{post.image}}"/>
+      </a>
+    </div>
+  </div>
+{% endfor %}

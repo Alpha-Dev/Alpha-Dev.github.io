@@ -1,0 +1,17 @@
+.grid{
+  .row{
+      @for $i from 1 through 12{
+      .col-#{$i}-12{
+        width:$i/12*100%;
+        float:left;
+      }
+    }
+      @media screen and (max-width:768px){
+        @for $i from 1 through 12{
+        .col-#{$i}-12{
+          width:100%;
+        }
+      }
+    }
+  }
+}

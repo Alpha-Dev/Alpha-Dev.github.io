@@ -1,0 +1,41 @@
+---
+layout: blog
+title: My Blog
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+<div class="post">
+  <a class="title--container" href="{{ post.url }}" >
+    <h1 class="title">{{ post.title }}</h1>
+  </a>
+  <a class="image--container" href="{{ post.url }}">
+    <img class="image" src="{{post.image }}" />
+  </a>
+  <div class="postinfo">
+    <p class="author">{{ post.author }}</p>
+    <p class="date">{{ post.date | date: '%B %-d, %Y' }}</p>
+  </div>
+  <div class="post-body">
+    {{ post.content | truncatewords:100}}
+  </div>
+</div>
+<div class="readmore--container">
+  <a href="{{ post.url }}" class="readmore">Read More</a>
+</div>
+<div class="divider"></div>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous button">
+      <p>Previous</p>
+    </a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next button">
+      <p>Next</p>
+    </a>
+  {% endif %}
+</div>

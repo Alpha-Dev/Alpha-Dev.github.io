@@ -1,0 +1,131 @@
+@import 'imports/Reset';
+@import 'imports/base';
+@import 'imports/Grid';
+@import 'imports/Mixins';
+@import 'imports/navbar';
+
+.post--container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top:100px;
+  width:100%;
+  margin-bottom: 25px;
+  .post{
+    background-color: white;
+    width: 80%;
+    max-width: 800px;
+    font-family:codeFont;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+    .image--container{
+      width: 100%;
+      @include CenterFlex;
+    }
+    .title--container{
+      width: 100%;
+      margin-left:40px;
+      color:black;
+      .title{
+        text-align: left;
+        font-size: 3em;
+      }
+    }
+    .image{
+      width: 75%;
+      height: auto;
+      border:solid 2px indigo;
+      margin-bottom: 25px;
+    }
+    img[src=""]{
+      display: none;
+    }
+    .postinfo{
+      width: 100%;
+      height: 50px;
+      position: relative;
+      font-size:1.5em;
+      border-bottom:2px solid indigo;
+    }
+    .author{
+      position: absolute;
+      bottom:0px;
+      left:20px;
+    }
+    .date{
+      text-align: right;
+      position: absolute;
+      bottom:0px;
+      right:20px;
+    }
+    .divider{
+      width: 95%;
+      height: 5px;
+      background-color: indigo;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .title{
+      font-size:4em;
+      width: 95%;
+      text-align: center;
+      font-family:bold;
+    }
+    .post-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: biko;
+      font-size:16px;
+      width: 100%;
+      > p{
+        margin-top: 30px;
+        line-height: 140%;
+        width:95%;
+      }
+      > h1{
+        font-size:2em;
+        text-align: left;
+        width: 95%;
+        margin-top: 30px;
+      }
+      img{
+        width: 75%;
+        height: auto;
+        border:solid 2px indigo;
+        margin-bottom: 25px;
+        margin-top:25px;
+      }
+    }
+  }
+  .readmore--container{
+    text-align: right;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    width: 100%;
+  }
+}
+
+.pagination{
+  display:flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  .button{
+    @include CenterFlex;
+    width: 100px;
+    background-color: indigo;
+    padding: 10px;
+    color:white;
+    font-family: bold;
+    p{
+      text-align: center;
+      margin-top: 0px;
+    }
+  }
+}
