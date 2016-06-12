@@ -5,28 +5,6 @@
 @import 'imports/base';
 @import 'imports/GridFlex';
 
-.people{
-  height:400px;
-  .row{
-    height: 100%;
-    [class^=col-]{
-      height: 100%;
-      @include CenterFlex;
-      [class^=project--container]{
-        height:80%;
-        width:calc(100% - 50px);
-        background-color: indigo;
-      }
-    }
-  }
-  .person{
-    position: relative;
-    background-color: indigo;
-    height: 80%;
-    width:calc(100% - 50px);
-  }
-}
-
 .lander{
   background-color: skyblue;
   @include CenterFlex;
